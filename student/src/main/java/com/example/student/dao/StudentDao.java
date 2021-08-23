@@ -12,5 +12,7 @@ public interface StudentDao {
 	public void saveStudent(Student student);
 
 	public List<Student> getAllStudents();
+	
+	public void deleteStudentById(int id);
 
 }

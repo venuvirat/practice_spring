@@ -73,4 +73,11 @@ public class StudentDaoImpl implements StudentDao {
 		});
 	}
 
+	@Override
+	public void deleteStudentById(int id) {
+		 String sql="delete from student where s_id=:id ";
+		 namedParameterJdbcTemplate.update(sql,new MapSqlParameterSource("id",id));
+		
+	}
+
 }
